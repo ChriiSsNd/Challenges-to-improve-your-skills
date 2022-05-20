@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-Violet: hsl(257, 40%, 49%);
+    --color-Soft-Magenta: hsl(300, 69%, 71%);
+    --font-Poppins: 'Poppins', sans-serif; 
+    --font-Open-Sans: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-Open-Sans);
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+body {
+    margin: 0;
+    background: url('images/bg-desktop.svg') var(--color-Violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 85vw;
+    margin: auto;
+    display: grid;
+    grid-template-rows: .75fr 2fr .25fr;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+.heroBanner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+}
+
+.hero__img > img {
+    max-width: 100%;
+    height: auto;
+    animation: translate-one 3s ease-in-out -1s;
+}
+
+@keyframes translate-one {
+    0% {
+        transition: width 2s ease-in-out -0.5s, transform 2s;
+        transform: translateX(-1000px);
+    }
+}
+
+.hero__content {
+    animation: translate-two 3s ease-in-out -0.2s;
+}
+
+@keyframes translate-two {
+    0% {
+        transition: width 2s ease-in-out -0.5s, transform 2s;
+        transform: translateX(750px);
+    }
+}
+
+h1 {
+    font-family: var(--font-Poppins);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    color: rgb(255, 255, 255, .7);
+}
+
+button {
+    background-color: var(--color-white);
+    width: 180px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px #000;
+    cursor: pointer;
+    color: var(--color-Violet);
+    transition: background 1s ease-in -0.5s;
+}
+
+button:hover {
+    background-color: var(--color-Soft-Magenta);
+    font-family: var(--font-Poppins);
+    color: var(--color-white);
+}
+
+.btn__icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn__icon > div {
+    display: flex;
+    gap: 15px;
+}
+
+.btn__icon a {
+    text-decoration: none;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .3s ease .3s, transform 1s;
+}
+
+.btn__icon a:hover {
+    color: var(--color-Soft-Magenta);
+    border: 1px solid var(--color-Soft-Magenta);
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-rows: .75fr 2fr .5fr;
+    }
+    
+    .heroBanner {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        text-align: center;
+    }
+    
+    button {
+        background-color: var(--color-white);
+        width: 180px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 .5px 10px #000;
+        cursor: pointer;
+        color: var(--color-Violet);
+    }
+    
+    .btn__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    body {
+        margin: 0;
+        background: url('images/bg-mobile.svg') var(--color-Violet);
+        background-repeat: no-repeat;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-rows: .75fr 2fr .5fr;
+    }
+    
+    .heroBanner {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        text-align: center;
+    }
+    
+    button {
+        background-color: var(--color-white);
+        width: 180px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px 0;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 .5px 10px #000;
+        cursor: pointer;
+        color: var(--color-Violet);
+    }
+    
+    .btn__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
