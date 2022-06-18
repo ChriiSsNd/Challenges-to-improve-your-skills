@@ -23,6 +23,7 @@ html {
     font-family: var(--font-Rubik);
     font-weight: 400;
     color: var(--color-Dark-Grayish-Violet);
+    overflow: hidden;
 }
 
 body {

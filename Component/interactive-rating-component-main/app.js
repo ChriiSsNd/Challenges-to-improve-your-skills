@@ -19,6 +19,5 @@ function chooseRate(rate) {
             element.style.color = 'hsl(0, 0%, 100%)';
             successText.innerHTML = `You selected ${index + 1} out of 5`
         });
-        // element.removeEventListener();
     });
 };
