@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --font-Manrope: 'Manrope', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-Manrope);
+    font-weight:800;
+}
+
+body {
+    margin: 0;
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+label {
+    display: inline;
+    color: #fff;
+}
+
+input {
+    background-color: var(--Dark-Grayish-Blue);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    margin-left: 5px;
+}
+
+label[for="delay"] {
+    margin-left: 20px;
+}
+
+#set-alarm {
+    margin: 30px 0;
+    width: 200px;
+    padding: 10px;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarm {
+    width: 445px;
+    height: 217px;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.alarm__message {
+    color: var(--Neon-Green);
+    font-size: 28px;
+    word-spacing: 10px;
+}
+
+@media screen and (min-width: 699px) {
+
+	.alarm {
+        width: 540px;
+        height: 230px;
+        border-radius: 12px;
+        padding: 0 46px;
+    }
+}
